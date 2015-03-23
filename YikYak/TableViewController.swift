@@ -107,7 +107,7 @@ class TableViewController: PFQueryTableViewController, CLLocationManagerDelegate
     
     
     
-   
+   //Table View on Main Screen
   
 
     override func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!, object: PFObject!) -> PFTableViewCell! {

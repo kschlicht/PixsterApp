@@ -137,8 +137,9 @@ class TableViewController: PFQueryTableViewController, CLLocationManagerDelegate
         //cell.time.text = date
         //cell.time.text = "\((indexPath.row + 1) * 3)m ago"
         */
-
+        let reportCount = object.valueForKey("reportCount")
         
+        cell.reportCounter.text = "\(reportCount)"
         
         
         let replycnt = object.objectForKey("replies") as Int
@@ -182,6 +183,25 @@ class TableViewController: PFQueryTableViewController, CLLocationManagerDelegate
         self.tableView.reloadData()
         NSLog("Bottom Index Path \(hitIndex?.row)")
     }
+    
+    
+    
+    
+    
+    @IBAction func reportPostPressed(sender: UIButton) {
+       
+        let hitPoint = sender.convertPoint(CGPointZero, toView: self.tableView)
+        let hitIndex = self.tableView.indexPathForRowAtPoint(hitPoint)
+        let object = objectAtIndexPath(hitIndex)
+        object.incrementKey("reportCount", byAmount: 1)
+        object.saveInBackground()
+        self.tableView.reloadData()
+        NSLog("Bottom Index Path \(hitIndex?.row)")
+
+        
+  
+    }
+
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if(segue.identifier == "yakDetail"){

@@ -11,7 +11,8 @@ class TableViewCell: PFTableViewCell {
     @IBOutlet weak var count: UILabel!
     @IBOutlet weak var time: UILabel!
     @IBOutlet weak var replies: UILabel!
-    
+    @IBOutlet weak var reportCounter: UILabel!
+    @IBOutlet weak var reportPress: UIButton!
     
     
     

@@ -10,6 +10,8 @@
 	<string>YikYak</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>B6E6A1A69A6938D2F33A794F9AB072751F9E7AC4</key>
+		<string>https://github.com/aldrinc/PixsterApp.git</string>
 		<key>F95FF26684CA9E951A30F1147B81F1842BC40EE1</key>
 		<string>github.com:sarchak/YikYak.git</string>
 	</dict>
@@ -17,15 +19,17 @@
 	<string>YikYak.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>F95FF26684CA9E951A30F1147B81F1842BC40EE1</key>
+		<key>B6E6A1A69A6938D2F33A794F9AB072751F9E7AC4</key>
 		<string>..</string>
+		<key>F95FF26684CA9E951A30F1147B81F1842BC40EE1</key>
+		<string>../../YikYak</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>github.com:sarchak/YikYak.git</string>
+	<string>https://github.com/aldrinc/PixsterApp.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>F95FF26684CA9E951A30F1147B81F1842BC40EE1</string>
+	<string>B6E6A1A69A6938D2F33A794F9AB072751F9E7AC4</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
@@ -35,6 +39,14 @@
 			<string>F95FF26684CA9E951A30F1147B81F1842BC40EE1</string>
 			<key>IDESourceControlWCCName</key>
 			<string>YikYak</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>B6E6A1A69A6938D2F33A794F9AB072751F9E7AC4</string>
+			<key>IDESourceControlWCCName</key>
+			<string>YikYak-master-4</string>
 		</dict>
 	</array>
 </dict>

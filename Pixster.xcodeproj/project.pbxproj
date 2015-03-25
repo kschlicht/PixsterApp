@@ -46,14 +46,14 @@
 		56C68C321A5CF3F400AD5FE7 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		56C68C341A5D00AF00AD5FE7 /* CommentsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsTableViewController.swift; sourceTree = "<group>"; };
 		56F53B601A5FA566009EC2E0 /* CommentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
-		56FA24161A527563005DD3E4 /* YikYak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YikYak.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		56FA24161A527563005DD3E4 /* Pixster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pixster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56FA241A1A527563005DD3E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56FA241B1A527563005DD3E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		56FA241D1A527563005DD3E4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		56FA24201A527563005DD3E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		56FA24221A527563005DD3E4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		56FA24251A527563005DD3E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		56FA242B1A527563005DD3E4 /* YikYakTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YikYakTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		56FA242B1A527563005DD3E4 /* Pixster.temp_caseinsensitive_renameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Pixster.temp_caseinsensitive_renameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		56FA24301A527563005DD3E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56FA24311A527563005DD3E4 /* YikYakTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YikYakTests.swift; sourceTree = "<group>"; };
 		56FA243B1A52758A005DD3E4 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
@@ -87,8 +87,8 @@
 		56FA240D1A527563005DD3E4 = {
 			isa = PBXGroup;
 			children = (
-				56FA24181A527563005DD3E4 /* YikYak */,
-				56FA242E1A527563005DD3E4 /* YikYakTests */,
+				56FA24181A527563005DD3E4 /* Pixster */,
+				56FA242E1A527563005DD3E4 /* PixsterTests */,
 				56FA24171A527563005DD3E4 /* Products */,
 				CBAA8EE917312DB917AF801E /* Pods */,
 				87BB1EEF931A24C238FA2E91 /* Frameworks */,
@@ -98,13 +98,13 @@
 		56FA24171A527563005DD3E4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				56FA24161A527563005DD3E4 /* YikYak.app */,
-				56FA242B1A527563005DD3E4 /* YikYakTests.xctest */,
+				56FA24161A527563005DD3E4 /* Pixster.app */,
+				56FA242B1A527563005DD3E4 /* Pixster.temp_caseinsensitive_renameTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		56FA24181A527563005DD3E4 /* YikYak */ = {
+		56FA24181A527563005DD3E4 /* Pixster */ = {
 			isa = PBXGroup;
 			children = (
 				56FA241B1A527563005DD3E4 /* AppDelegate.swift */,
@@ -122,6 +122,7 @@
 				56C68C341A5D00AF00AD5FE7 /* CommentsTableViewController.swift */,
 				56F53B601A5FA566009EC2E0 /* CommentTableViewCell.swift */,
 			);
+			name = Pixster;
 			path = YikYak;
 			sourceTree = "<group>";
 		};
@@ -134,12 +135,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		56FA242E1A527563005DD3E4 /* YikYakTests */ = {
+		56FA242E1A527563005DD3E4 /* PixsterTests */ = {
 			isa = PBXGroup;
 			children = (
 				56FA24311A527563005DD3E4 /* YikYakTests.swift */,
 				56FA242F1A527563005DD3E4 /* Supporting Files */,
 			);
+			name = PixsterTests;
 			path = YikYakTests;
 			sourceTree = "<group>";
 		};
@@ -173,9 +175,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		56FA24151A527563005DD3E4 /* YikYak */ = {
+		56FA24151A527563005DD3E4 /* Pixster */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 56FA24351A527563005DD3E4 /* Build configuration list for PBXNativeTarget "YikYak" */;
+			buildConfigurationList = 56FA24351A527563005DD3E4 /* Build configuration list for PBXNativeTarget "Pixster" */;
 			buildPhases = (
 				8D8BB6150C4D98E0926386E6 /* Check Pods Manifest.lock */,
 				56FA24121A527563005DD3E4 /* Sources */,
@@ -187,14 +189,14 @@
 			);
 			dependencies = (
 			);
-			name = YikYak;
+			name = Pixster;
 			productName = YikYak;
-			productReference = 56FA24161A527563005DD3E4 /* YikYak.app */;
+			productReference = 56FA24161A527563005DD3E4 /* Pixster.app */;
 			productType = "com.apple.product-type.application";
 		};
-		56FA242A1A527563005DD3E4 /* YikYakTests */ = {
+		56FA242A1A527563005DD3E4 /* Pixster.Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 56FA24381A527563005DD3E4 /* Build configuration list for PBXNativeTarget "YikYakTests" */;
+			buildConfigurationList = 56FA24381A527563005DD3E4 /* Build configuration list for PBXNativeTarget "Pixster.Tests" */;
 			buildPhases = (
 				56FA24271A527563005DD3E4 /* Sources */,
 				56FA24281A527563005DD3E4 /* Frameworks */,
@@ -205,9 +207,9 @@
 			dependencies = (
 				56FA242D1A527563005DD3E4 /* PBXTargetDependency */,
 			);
-			name = YikYakTests;
+			name = Pixster.Tests;
 			productName = YikYakTests;
-			productReference = 56FA242B1A527563005DD3E4 /* YikYakTests.xctest */;
+			productReference = 56FA242B1A527563005DD3E4 /* Pixster.temp_caseinsensitive_renameTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -217,7 +219,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0610;
-				ORGANIZATIONNAME = "Shrikar Archak";
+				ORGANIZATIONNAME = Pixster;
 				TargetAttributes = {
 					56FA24151A527563005DD3E4 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -233,7 +235,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 56FA24111A527563005DD3E4 /* Build configuration list for PBXProject "YikYak" */;
+			buildConfigurationList = 56FA24111A527563005DD3E4 /* Build configuration list for PBXProject "Pixster" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -246,8 +248,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				56FA24151A527563005DD3E4 /* YikYak */,
-				56FA242A1A527563005DD3E4 /* YikYakTests */,
+				56FA24151A527563005DD3E4 /* Pixster */,
+				56FA242A1A527563005DD3E4 /* Pixster.Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -336,7 +338,7 @@
 /* Begin PBXTargetDependency section */
 		56FA242D1A527563005DD3E4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 56FA24151A527563005DD3E4 /* YikYak */;
+			target = 56FA24151A527563005DD3E4 /* Pixster */;
 			targetProxy = 56FA242C1A527563005DD3E4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -446,7 +448,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = YikYak/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Pixster;
 				SWIFT_OBJC_BRIDGING_HEADER = "YikYak/YikYak-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -460,7 +462,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = YikYak/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Pixster;
 				SWIFT_OBJC_BRIDGING_HEADER = "YikYak/YikYak-Bridging-Header.h";
 			};
 			name = Release;
@@ -479,7 +481,7 @@
 				);
 				INFOPLIST_FILE = YikYakTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Pixster.temp_caseinsensitive_renameTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YikYak.app/YikYak";
 			};
 			name = Debug;
@@ -494,7 +496,7 @@
 				);
 				INFOPLIST_FILE = YikYakTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Pixster.temp_caseinsensitive_renameTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YikYak.app/YikYak";
 			};
 			name = Release;
@@ -502,7 +504,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		56FA24111A527563005DD3E4 /* Build configuration list for PBXProject "YikYak" */ = {
+		56FA24111A527563005DD3E4 /* Build configuration list for PBXProject "Pixster" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				56FA24331A527563005DD3E4 /* Debug */,
@@ -511,7 +513,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		56FA24351A527563005DD3E4 /* Build configuration list for PBXNativeTarget "YikYak" */ = {
+		56FA24351A527563005DD3E4 /* Build configuration list for PBXNativeTarget "Pixster" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				56FA24361A527563005DD3E4 /* Debug */,
@@ -520,7 +522,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		56FA24381A527563005DD3E4 /* Build configuration list for PBXNativeTarget "YikYakTests" */ = {
+		56FA24381A527563005DD3E4 /* Build configuration list for PBXNativeTarget "Pixster.Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				56FA24391A527563005DD3E4 /* Debug */,

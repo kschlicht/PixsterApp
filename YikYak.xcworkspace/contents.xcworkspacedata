@@ -5,7 +5,7 @@
       location = "group:home.gpx">
    </FileRef>
    <FileRef
-      location = "group:YikYak.xcodeproj">
+      location = "group:Pixster.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">

@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "56FA24151A527563005DD3E4"
-               BuildableName = "YikYak.app"
-               BlueprintName = "YikYak"
-               ReferencedContainer = "container:YikYak.xcodeproj">
+               BuildableName = "Pixster.app"
+               BlueprintName = "Pixster"
+               ReferencedContainer = "container:Pixster.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "56FA242A1A527563005DD3E4"
-               BuildableName = "YikYakTests.xctest"
-               BlueprintName = "YikYakTests"
-               ReferencedContainer = "container:YikYak.xcodeproj">
+               BuildableName = "Pixster.temp_caseinsensitive_renameTests.xctest"
+               BlueprintName = "Pixster.Tests"
+               ReferencedContainer = "container:Pixster.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,9 +47,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "56FA242A1A527563005DD3E4"
-               BuildableName = "YikYakTests.xctest"
-               BlueprintName = "YikYakTests"
-               ReferencedContainer = "container:YikYak.xcodeproj">
+               BuildableName = "Pixster.temp_caseinsensitive_renameTests.xctest"
+               BlueprintName = "Pixster.Tests"
+               ReferencedContainer = "container:Pixster.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -57,9 +57,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "56FA24151A527563005DD3E4"
-            BuildableName = "YikYak.app"
-            BlueprintName = "YikYak"
-            ReferencedContainer = "container:YikYak.xcodeproj">
+            BuildableName = "Pixster.app"
+            BlueprintName = "Pixster"
+            ReferencedContainer = "container:Pixster.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "56FA24151A527563005DD3E4"
-            BuildableName = "YikYak.app"
-            BlueprintName = "YikYak"
-            ReferencedContainer = "container:YikYak.xcodeproj">
+            BuildableName = "Pixster.app"
+            BlueprintName = "Pixster"
+            ReferencedContainer = "container:Pixster.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -94,9 +94,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "56FA24151A527563005DD3E4"
-            BuildableName = "YikYak.app"
-            BlueprintName = "YikYak"
-            ReferencedContainer = "container:YikYak.xcodeproj">
+            BuildableName = "Pixster.app"
+            BlueprintName = "Pixster"
+            ReferencedContainer = "container:Pixster.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

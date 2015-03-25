@@ -7,8 +7,7 @@ import CoreLocation
 
 class TableViewController: PFQueryTableViewController, CLLocationManagerDelegate {
 
-    var yaks = ["Getting Started with building a Yik Yak Clone in Swift","Xcode 6 Tutorial using Autolayouts",
-        "In this tutorial you will also learn how to talk to Parse Backend", "Learning Swift by building real world applications", "Test"]
+    var pixs = [""]
     
     let locationManager = CLLocationManager()
     var currLocation : CLLocationCoordinate2D?
@@ -119,7 +118,7 @@ class TableViewController: PFQueryTableViewController, CLLocationManagerDelegate
         //Retrieve date from Parse Servers
         var dateUpdated = object.createdAt as NSDate
         var dateFormat = NSDateFormatter()
-        dateFormat.dateFormat = "EEE, MMM d, h:mm a"
+        dateFormat.dateFormat = "h:mm a"
         let parseDate = NSString(format: "%@", dateFormat.stringFromDate(dateUpdated))
         
         cell.time.text = NSString(format: "%@", dateFormat.stringFromDate(dateUpdated))
@@ -137,9 +136,9 @@ class TableViewController: PFQueryTableViewController, CLLocationManagerDelegate
         //cell.time.text = date
         //cell.time.text = "\((indexPath.row + 1) * 3)m ago"
         */
-        let reportCount = object.valueForKey("reportCount")
+        //let reportCount = object.valueForKey("reportCount")
         
-        cell.reportCounter.text = "\(reportCount)"
+        //cell.reportCounter.text = "\(reportCount)"
         
         
         let replycnt = object.objectForKey("replies") as Int

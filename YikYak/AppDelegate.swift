@@ -28,11 +28,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         imageView.layer.borderWidth=1.0
         imageView.layer.masksToBounds = false
         imageView.layer.borderColor = UIColor.whiteColor().CGColor
-        imageView.layer.cornerRadius = 13
+        imageView.layer.cornerRadius = 200
         imageView.layer.cornerRadius = imageView.frame.size.height/2
         imageView.clipsToBounds = true
 
+        /*
+        let textField = UILabel.appearance()
         
+        textField.layer.borderWidth = 1.0
+        textField.layer.masksToBounds = false
+        
+        textField.layer.borderColor = UIColor( red: 255/255, green: 0.5, blue:0, alpha: 1.0 ).CGColor
+        */
+
         
         Parse.setApplicationId("AIXmuxjz4MQPvV02bXvEIdb4AKuuUZzjMLgTTRz1", clientKey: "iZUqHOwq4nDCseZbS7BS0kpNzgPH240KQM0YduVP")
         

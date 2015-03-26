@@ -75,7 +75,6 @@ class PostViewController: UIViewController, UITextViewDelegate, CLLocationManage
             testObject["replies"] = 0            
             testObject["location"] = PFGeoPoint(latitude: currLocation!.latitude , longitude: currLocation!.longitude)
             testObject["comments"] = []
-            //testObject["imageName"] = "picOne"
             testObject["profileImage"] = imageFile
             testObject.saveInBackground()
             self.dismissViewControllerAnimated(true , completion: nil)

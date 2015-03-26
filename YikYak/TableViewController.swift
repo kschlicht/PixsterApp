@@ -115,7 +115,7 @@ class TableViewController: PFQueryTableViewController, CLLocationManagerDelegate
         let score = object.valueForKey("count") as Int
         cell.count.text = "\(score)"
         
-        //Retrieve date from Parse Servers
+        //Retrieve date from Parse Servers and display in label
         var dateUpdated = object.createdAt as NSDate
         var dateFormat = NSDateFormatter()
         dateFormat.dateFormat = "h:mm a"
@@ -197,7 +197,12 @@ class TableViewController: PFQueryTableViewController, CLLocationManagerDelegate
         self.tableView.reloadData()
         NSLog("Bottom Index Path \(hitIndex?.row)")
 
+        let alertController = UIAlertController(title: "Reported", message:
+            "Thank you for informing us! We will review this post for inappropriate content and act accordingly.", preferredStyle: UIAlertControllerStyle.Alert)
+        alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
         
+        self.presentViewController(alertController, animated: true, completion: nil)
+
   
     }
 

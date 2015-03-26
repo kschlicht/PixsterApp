@@ -223,6 +223,7 @@
 				TargetAttributes = {
 					56FA24151A527563005DD3E4 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = N4J484DP9H;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -231,6 +232,7 @@
 					};
 					56FA242A1A527563005DD3E4 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = N4J484DP9H;
 						TestTargetID = 56FA24151A527563005DD3E4;
 					};
 				};
@@ -482,7 +484,7 @@
 				INFOPLIST_FILE = YikYakTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = Pixster.temp_caseinsensitive_renameTests;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YikYak.app/YikYak";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pixster.app/Pixster";
 			};
 			name = Debug;
 		};
@@ -497,7 +499,7 @@
 				INFOPLIST_FILE = YikYakTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = Pixster.temp_caseinsensitive_renameTests;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YikYak.app/YikYak";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pixster.app/Pixster";
 			};
 			name = Release;
 		};

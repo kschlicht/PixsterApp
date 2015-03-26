@@ -103,6 +103,7 @@ class CommentsTableViewController: UITableViewController, UITextViewDelegate {
         button.addTarget(self, action: "reply", forControlEvents: UIControlEvents.TouchUpInside)
         
         
+        
         footerView?.addSubview(button)
         commentView?.delegate = self
         println(self.tableView.frame)
@@ -170,6 +171,8 @@ class CommentsTableViewController: UITableViewController, UITextViewDelegate {
         commentView?.text = ""
         self.commentView?.resignFirstResponder()
         self.tableView.reloadSections(NSIndexSet(index: 0), withRowAnimation: UITableViewRowAnimation.Automatic)
+        
+        
 
     }
 

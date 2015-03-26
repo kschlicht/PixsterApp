@@ -10,6 +10,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        
 
         let navbar = UINavigationBar.appearance()
         navbar.barTintColor = UIColor(red: 255/255, green: 94.0/255, blue: 94.0/255, alpha: 1)

@@ -3,6 +3,9 @@
 
 
 import UIKit
+import MediaPlayer
+import MobileCoreServices
+import AVFoundation
 
 class PostViewController: UIViewController, UITextViewDelegate, CLLocationManagerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
@@ -61,27 +64,42 @@ class PostViewController: UIViewController, UITextViewDelegate, CLLocationManage
     
 
     
-    @IBAction func postPressed(sender: AnyObject) {
+@IBAction func postPressed(sender: AnyObject) {
         
-        if(currLocation != nil){
-            
-            
-            
+    if(currLocation != nil){
+            if (parseTestPostView.text != nil) {
+            if (parseImagePostView.image != nil) {
             let imageData = UIImagePNGRepresentation(parseImagePostView.image)
             let imageFile = PFFile(name: "picOne.png", data:imageData)
             let testObject = PFObject(className: "Yak")
             testObject["text"] = self.parseTestPostView.text
             testObject["count"] = 0
-            testObject["replies"] = 0            
+            testObject["replies"] = 0
             testObject["location"] = PFGeoPoint(latitude: currLocation!.latitude , longitude: currLocation!.longitude)
             testObject["comments"] = []
             testObject["profileImage"] = imageFile
             testObject.saveInBackground()
             self.dismissViewControllerAnimated(true , completion: nil)
             
-            
-            
-            
+            } else{
+                let alertController = UIAlertController(title: "No Image", message:
+                    "Please take a picture or record a video to continue!", preferredStyle: UIAlertControllerStyle.Alert)
+                alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+                
+                self.presentViewController(alertController, animated: true, completion: nil)
+                let button = sender
+                
+                }
+            } else {
+                let alertController = UIAlertController(title: "Text mising!", message:
+                    "Please enter a caption.", preferredStyle: UIAlertControllerStyle.Alert)
+                alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+                self.presentViewController(alertController, animated: true, completion: nil)
+                let button = sender
+                
+        }
+        
+        
             
         } else {
             alert()
@@ -89,33 +107,69 @@ class PostViewController: UIViewController, UITextViewDelegate, CLLocationManage
 
     }
     
+    /*
+    let captureSession = AVCaptureSession()
+    var previewLayer : AVCaptureVideoPreviewLayer?
+    var captureDevice : AVCaptureDevice?
+    var moviePlayer:MPMoviePlayerController!
+    */
     
        @IBAction func openPhotoLibrary(sender: UIButton) {
+        
+        //if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) {
+        
         var photoSelector = UIImagePickerController()
         photoSelector.delegate = self
         photoSelector.sourceType = .PhotoLibrary
+
         
+    
+        //photoSelector.showsCameraControls = true
+        //photoSelector.allowsEditing = false
         self.presentViewController(photoSelector, animated: true, completion: nil);
+
+        //photoSelector.mediaTypes = UIImagePickerController.availableMediaTypesForSourceType(.Camera)!
+            
+            /*
+            var movieUrl:NSURL = NSURL(fileURLWithPath: UIImagePickerControllerMediaURL)!
+            
+            moviePlayer = MPMoviePlayerController(contentURL: movieUrl)
+            moviePlayer.view.frame = CGRect(x: 20, y: 100, width: 200, height: 150)
+            
+            self.view.addSubview(moviePlayer.view)
+    */
+            
+            
+            
+            
+        //}
+           //else {
+            //    println("Camera not available.")
+
+            //}
 
     }
     
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
-        
+    
         let imagePicked:UIImage = info [UIImagePickerControllerOriginalImage] as UIImage
         
-        let scaledImage = self.scaleImageWith(imagePicked, and: CGSize(width: 200,height: 200))
-        
-        
+        let scaledImage = self.scaleImageWith(imagePicked, and: CGSize(width: 400,height: 380.5))
         parseImagePostView.image = scaledImage
-        
-        
         self.dismissViewControllerAnimated(false, completion: nil)
+    }
+    
+      
+        
+
+        
+
         
         
         
 
-    }
+    
     
 
    

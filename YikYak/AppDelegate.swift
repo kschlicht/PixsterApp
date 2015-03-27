@@ -41,9 +41,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         textField.layer.borderColor = UIColor( red: 255/255, green: 0.5, blue:0, alpha: 1.0 ).CGColor
         */
+        
 
         
+        
         Parse.setApplicationId("AIXmuxjz4MQPvV02bXvEIdb4AKuuUZzjMLgTTRz1", clientKey: "iZUqHOwq4nDCseZbS7BS0kpNzgPH240KQM0YduVP")
+        
+        
         
         return true
     }

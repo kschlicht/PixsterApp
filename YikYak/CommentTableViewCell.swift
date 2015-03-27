@@ -1,7 +1,7 @@
 
 //  CommentTableViewCell.swift
 
-
+/*
 import UIKit
 
 class CommentTableViewCell: UITableViewCell {
@@ -19,3 +19,4 @@ class CommentTableViewCell: UITableViewCell {
     }
 
 }
+*/

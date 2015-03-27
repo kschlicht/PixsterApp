@@ -50,6 +50,8 @@ class TableViewController: PFQueryTableViewController, CLLocationManagerDelegate
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
+        self.loadObjects()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -115,7 +117,7 @@ class TableViewController: PFQueryTableViewController, CLLocationManagerDelegate
         let score = object.valueForKey("count") as Int
         cell.count.text = "\(score)"
         
-        //Retrieve date from Parse Servers and display in label
+    //Retrieve date from Parse Servers and display in label
         var dateUpdated = object.createdAt as NSDate
         var dateFormat = NSDateFormatter()
         dateFormat.dateFormat = "h:mm a"
@@ -123,7 +125,9 @@ class TableViewController: PFQueryTableViewController, CLLocationManagerDelegate
         
         cell.time.text = NSString(format: "%@", dateFormat.stringFromDate(dateUpdated))
         
-        //Current Time to find date difference
+        
+        
+    //Current Time to find date difference
         /*
         let date = NSDate()
         let calendar = NSCalendar.currentCalendar()
@@ -141,17 +145,19 @@ class TableViewController: PFQueryTableViewController, CLLocationManagerDelegate
         //cell.reportCounter.text = "\(reportCount)"
         
         
-        let replycnt = object.objectForKey("replies") as Int
-        cell.replies.text = "\(replycnt) replies"
-        let userImageFile = object.valueForKey("profileImage") as PFFile
+        //let replycnt = object.objectForKey("replies") as Int
+        //cell.replies.text = "\(replycnt) replies"
+       
         
+    //Photo from user
+        let userImageFile = object.valueForKey("profileImage") as PFFile
         userImageFile.getDataInBackgroundWithBlock {
             (imageData: NSData!, error: NSError!) -> Void in
-            //if !(error != nil) {
+            if error == nil {
                 let image = UIImage(data:imageData)
 
                 cell.parseImage.image = image
-            //}
+            }
         }
 
         
@@ -171,6 +177,7 @@ class TableViewController: PFQueryTableViewController, CLLocationManagerDelegate
         self.tableView.reloadData()
         NSLog("Top Index Path \(hitIndex?.row)")
         
+        
     }
 
     @IBAction func bottomButton(sender: AnyObject) {
@@ -181,6 +188,7 @@ class TableViewController: PFQueryTableViewController, CLLocationManagerDelegate
         object.saveInBackground()
         self.tableView.reloadData()
         NSLog("Bottom Index Path \(hitIndex?.row)")
+        
     }
     
     
@@ -202,7 +210,9 @@ class TableViewController: PFQueryTableViewController, CLLocationManagerDelegate
         alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
         
         self.presentViewController(alertController, animated: true, completion: nil)
+        let button = sender
 
+        button.enabled = false
   
     }
 
@@ -212,8 +222,8 @@ class TableViewController: PFQueryTableViewController, CLLocationManagerDelegate
             let indexPath = self.tableView.indexPathForSelectedRow()
             let obj = self.objects[indexPath!.row] as PFObject
             let navVC = segue.destinationViewController as UINavigationController
-            let detailVC = navVC.topViewController as DetailViewController
-            detailVC.yak = obj
+            //let detailVC = navVC.topViewController as DetailViewController
+            //detailVC.yak = obj
         }
     }
    

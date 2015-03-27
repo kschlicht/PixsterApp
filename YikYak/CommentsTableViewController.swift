@@ -1,8 +1,9 @@
 
 //  CommentsTableViewController.swift
-
+/*
 
 import UIKit
+import CoreLocation
 
 class CommentsTableViewController: UITableViewController, UITextViewDelegate {
 
@@ -172,7 +173,7 @@ class CommentsTableViewController: UITableViewController, UITextViewDelegate {
         self.commentView?.resignFirstResponder()
         self.tableView.reloadSections(NSIndexSet(index: 0), withRowAnimation: UITableViewRowAnimation.Automatic)
         
-        
+    
 
     }
 
@@ -233,3 +234,4 @@ class CommentsTableViewController: UITableViewController, UITextViewDelegate {
     */
 
 }
+*/

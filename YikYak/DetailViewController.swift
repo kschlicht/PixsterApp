@@ -1,6 +1,6 @@
 
 //  DetailViewController.swift
-
+/*
 
 import UIKit
 import MapKit
@@ -50,9 +50,9 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
         self.mapView.showsUserLocation = true
 
         
-        if(yak?.objectForKey("comments") != nil) {
-            comments = yak?.objectForKey("comments") as [String]
-        }
+        //if(yak?.objectForKey("comments") != nil) {
+        //    comments = yak?.objectForKey("comments") as [String]
+        //}
         println(yak)
         println(yak?.objectForKey("text"))
         self.yakLabel.text = yak?.objectForKey("text") as? String
@@ -187,3 +187,4 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
         self.tableView.reloadData()
     }
 }
+*/

@@ -19,6 +19,14 @@
 		56FA24261A527563005DD3E4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56FA24241A527563005DD3E4 /* LaunchScreen.xib */; };
 		56FA24321A527563005DD3E4 /* YikYakTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FA24311A527563005DD3E4 /* YikYakTests.swift */; };
 		7F7058FB1AC4D331006BF9FB /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F7058FA1AC4D331006BF9FB /* MediaPlayer.framework */; };
+		7FDDCB321AC5D0AF00A59E19 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FDDCB211AC5D0AF00A59E19 /* LaunchScreen.xib */; };
+		7FDDCB331AC5D0AF00A59E19 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FDDCB231AC5D0AF00A59E19 /* Main.storyboard */; };
+		7FDDCB341AC5D0AF00A59E19 /* CommentsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDDCB251AC5D0AF00A59E19 /* CommentsTableViewController.swift */; };
+		7FDDCB361AC5D0AF00A59E19 /* CustomTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDDCB271AC5D0AF00A59E19 /* CustomTableViewController.swift */; };
+		7FDDCB391AC5D0AF00A59E19 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FDDCB2A1AC5D0AF00A59E19 /* Images.xcassets */; };
+		7FDDCB3A1AC5D0AF00A59E19 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7FDDCB2B1AC5D0AF00A59E19 /* Info.plist */; };
+		7FDDCB3C1AC5D0AF00A59E19 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDDCB2D1AC5D0AF00A59E19 /* TableViewCell.swift */; };
+		7FDDCB3D1AC5D0AF00A59E19 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDDCB2E1AC5D0AF00A59E19 /* TableViewController.swift */; };
 		825933FCF51E67A62C300EBC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A043DA0A8A51ABF79C9D5B80 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +65,21 @@
 		56FA243F1A53D99C005DD3E4 /* CustomTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewController.swift; sourceTree = "<group>"; };
 		6D0BAF168C1DB4DEB0F8732B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		7F7058FA1AC4D331006BF9FB /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		7FDDCB201AC5D0AF00A59E19 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7FDDCB221AC5D0AF00A59E19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		7FDDCB241AC5D0AF00A59E19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7FDDCB251AC5D0AF00A59E19 /* CommentsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsTableViewController.swift; sourceTree = "<group>"; };
+		7FDDCB261AC5D0AF00A59E19 /* CommentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
+		7FDDCB271AC5D0AF00A59E19 /* CustomTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewController.swift; sourceTree = "<group>"; };
+		7FDDCB281AC5D0AF00A59E19 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		7FDDCB291AC5D0AF00A59E19 /* home.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = home.gpx; sourceTree = "<group>"; };
+		7FDDCB2A1AC5D0AF00A59E19 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		7FDDCB2B1AC5D0AF00A59E19 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7FDDCB2C1AC5D0AF00A59E19 /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		7FDDCB2D1AC5D0AF00A59E19 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		7FDDCB2E1AC5D0AF00A59E19 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		7FDDCB2F1AC5D0AF00A59E19 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7FDDCB301AC5D0AF00A59E19 /* YikYak-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "YikYak-Bridging-Header.h"; sourceTree = "<group>"; };
 		A043DA0A8A51ABF79C9D5B80 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -105,6 +128,7 @@
 		56FA24181A527563005DD3E4 /* YikYak */ = {
 			isa = PBXGroup;
 			children = (
+				7FDDCB1F1AC5D0AF00A59E19 /* YikYak */,
 				56FA241B1A527563005DD3E4 /* AppDelegate.swift */,
 				56FA241D1A527563005DD3E4 /* ViewController.swift */,
 				56FA241F1A527563005DD3E4 /* Main.storyboard */,
@@ -148,6 +172,28 @@
 				56FA24301A527563005DD3E4 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7FDDCB1F1AC5D0AF00A59E19 /* YikYak */ = {
+			isa = PBXGroup;
+			children = (
+				7FDDCB201AC5D0AF00A59E19 /* AppDelegate.swift */,
+				7FDDCB211AC5D0AF00A59E19 /* LaunchScreen.xib */,
+				7FDDCB231AC5D0AF00A59E19 /* Main.storyboard */,
+				7FDDCB251AC5D0AF00A59E19 /* CommentsTableViewController.swift */,
+				7FDDCB261AC5D0AF00A59E19 /* CommentTableViewCell.swift */,
+				7FDDCB271AC5D0AF00A59E19 /* CustomTableViewController.swift */,
+				7FDDCB281AC5D0AF00A59E19 /* DetailViewController.swift */,
+				7FDDCB291AC5D0AF00A59E19 /* home.gpx */,
+				7FDDCB2A1AC5D0AF00A59E19 /* Images.xcassets */,
+				7FDDCB2B1AC5D0AF00A59E19 /* Info.plist */,
+				7FDDCB2C1AC5D0AF00A59E19 /* PostViewController.swift */,
+				7FDDCB2D1AC5D0AF00A59E19 /* TableViewCell.swift */,
+				7FDDCB2E1AC5D0AF00A59E19 /* TableViewController.swift */,
+				7FDDCB2F1AC5D0AF00A59E19 /* ViewController.swift */,
+				7FDDCB301AC5D0AF00A59E19 /* YikYak-Bridging-Header.h */,
+			);
+			name = YikYak;
 			sourceTree = "<group>";
 		};
 		87BB1EEF931A24C238FA2E91 /* Frameworks */ = {
@@ -259,8 +305,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FDDCB321AC5D0AF00A59E19 /* LaunchScreen.xib in Resources */,
+				7FDDCB391AC5D0AF00A59E19 /* Images.xcassets in Resources */,
+				7FDDCB3A1AC5D0AF00A59E19 /* Info.plist in Resources */,
 				56FA24211A527563005DD3E4 /* Main.storyboard in Resources */,
 				56FA24261A527563005DD3E4 /* LaunchScreen.xib in Resources */,
+				7FDDCB331AC5D0AF00A59E19 /* Main.storyboard in Resources */,
 				5636A8921A54EEB500C66978 /* home.gpx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -312,8 +362,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FDDCB341AC5D0AF00A59E19 /* CommentsTableViewController.swift in Sources */,
+				7FDDCB3C1AC5D0AF00A59E19 /* TableViewCell.swift in Sources */,
+				7FDDCB3D1AC5D0AF00A59E19 /* TableViewController.swift in Sources */,
 				56684CEF1A53EADE00542373 /* PostViewController.swift in Sources */,
 				56FA241E1A527563005DD3E4 /* ViewController.swift in Sources */,
+				7FDDCB361AC5D0AF00A59E19 /* CustomTableViewController.swift in Sources */,
 				56F53B611A5FA566009EC2E0 /* CommentTableViewCell.swift in Sources */,
 				56FA241C1A527563005DD3E4 /* AppDelegate.swift in Sources */,
 				56C68C331A5CF3F400AD5FE7 /* DetailViewController.swift in Sources */,
@@ -353,6 +407,22 @@
 				56FA24251A527563005DD3E4 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		7FDDCB211AC5D0AF00A59E19 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7FDDCB221AC5D0AF00A59E19 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		7FDDCB231AC5D0AF00A59E19 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7FDDCB241AC5D0AF00A59E19 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

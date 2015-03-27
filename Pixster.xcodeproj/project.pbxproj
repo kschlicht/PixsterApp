@@ -12,17 +12,12 @@
 		5636A8921A54EEB500C66978 /* home.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 5636A8911A54EEB500C66978 /* home.gpx */; };
 		56684CEF1A53EADE00542373 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56684CEE1A53EADE00542373 /* PostViewController.swift */; };
 		56C68C331A5CF3F400AD5FE7 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C68C321A5CF3F400AD5FE7 /* DetailViewController.swift */; };
-		56C68C351A5D00AF00AD5FE7 /* CommentsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C68C341A5D00AF00AD5FE7 /* CommentsTableViewController.swift */; };
 		56F53B611A5FA566009EC2E0 /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F53B601A5FA566009EC2E0 /* CommentTableViewCell.swift */; };
 		56FA241C1A527563005DD3E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FA241B1A527563005DD3E4 /* AppDelegate.swift */; };
 		56FA241E1A527563005DD3E4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FA241D1A527563005DD3E4 /* ViewController.swift */; };
 		56FA24211A527563005DD3E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56FA241F1A527563005DD3E4 /* Main.storyboard */; };
-		56FA24231A527563005DD3E4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56FA24221A527563005DD3E4 /* Images.xcassets */; };
 		56FA24261A527563005DD3E4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56FA24241A527563005DD3E4 /* LaunchScreen.xib */; };
 		56FA24321A527563005DD3E4 /* YikYakTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FA24311A527563005DD3E4 /* YikYakTests.swift */; };
-		56FA243C1A52758A005DD3E4 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FA243B1A52758A005DD3E4 /* TableViewController.swift */; };
-		56FA243E1A528581005DD3E4 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FA243D1A528581005DD3E4 /* TableViewCell.swift */; };
-		56FA24401A53D99C005DD3E4 /* CustomTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FA243F1A53D99C005DD3E4 /* CustomTableViewController.swift */; };
 		7F7058FB1AC4D331006BF9FB /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F7058FA1AC4D331006BF9FB /* MediaPlayer.framework */; };
 		825933FCF51E67A62C300EBC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A043DA0A8A51ABF79C9D5B80 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -90,7 +85,7 @@
 		56FA240D1A527563005DD3E4 = {
 			isa = PBXGroup;
 			children = (
-				56FA24181A527563005DD3E4 /* Pixster */,
+				56FA24181A527563005DD3E4 /* YikYak */,
 				56FA242E1A527563005DD3E4 /* PixsterTests */,
 				56FA24171A527563005DD3E4 /* Products */,
 				CBAA8EE917312DB917AF801E /* Pods */,
@@ -107,7 +102,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		56FA24181A527563005DD3E4 /* Pixster */ = {
+		56FA24181A527563005DD3E4 /* YikYak */ = {
 			isa = PBXGroup;
 			children = (
 				56FA241B1A527563005DD3E4 /* AppDelegate.swift */,
@@ -125,7 +120,6 @@
 				56C68C341A5D00AF00AD5FE7 /* CommentsTableViewController.swift */,
 				56F53B601A5FA566009EC2E0 /* CommentTableViewCell.swift */,
 			);
-			name = Pixster;
 			path = YikYak;
 			sourceTree = "<group>";
 		};
@@ -222,7 +216,7 @@
 		56FA240E1A527563005DD3E4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 0620;
 				ORGANIZATIONNAME = Pixster;
 				TargetAttributes = {
 					56FA24151A527563005DD3E4 = {
@@ -268,7 +262,6 @@
 				56FA24211A527563005DD3E4 /* Main.storyboard in Resources */,
 				56FA24261A527563005DD3E4 /* LaunchScreen.xib in Resources */,
 				5636A8921A54EEB500C66978 /* home.gpx in Resources */,
-				56FA24231A527563005DD3E4 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,12 +314,8 @@
 			files = (
 				56684CEF1A53EADE00542373 /* PostViewController.swift in Sources */,
 				56FA241E1A527563005DD3E4 /* ViewController.swift in Sources */,
-				56FA243E1A528581005DD3E4 /* TableViewCell.swift in Sources */,
-				56C68C351A5D00AF00AD5FE7 /* CommentsTableViewController.swift in Sources */,
 				56F53B611A5FA566009EC2E0 /* CommentTableViewCell.swift in Sources */,
-				56FA243C1A52758A005DD3E4 /* TableViewController.swift in Sources */,
 				56FA241C1A527563005DD3E4 /* AppDelegate.swift in Sources */,
-				56FA24401A53D99C005DD3E4 /* CustomTableViewController.swift in Sources */,
 				56C68C331A5CF3F400AD5FE7 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -442,6 +431,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

@@ -7,8 +7,7 @@ import CoreLocation
 
 class TableViewController: PFQueryTableViewController, CLLocationManagerDelegate {
 
-    var yaks = ["Getting Started with building a Yik Yak Clone in Swift","Xcode 6 Tutorial using Autolayouts",
-        "In this tutorial you will also learn how to talk to Parse Backend", "Learning Swift by building real world applications", "Test"]
+    var pixs = [""]
     
     let locationManager = CLLocationManager()
     var currLocation : CLLocationCoordinate2D?
@@ -51,6 +50,8 @@ class TableViewController: PFQueryTableViewController, CLLocationManagerDelegate
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
+        self.loadObjects()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -107,7 +108,7 @@ class TableViewController: PFQueryTableViewController, CLLocationManagerDelegate
     
     
     
-   //Table View on Main Screen
+   
   
 
     override func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!, object: PFObject!) -> PFTableViewCell! {
@@ -115,16 +116,75 @@ class TableViewController: PFQueryTableViewController, CLLocationManagerDelegate
         cell.parseText.text = object.valueForKey("text") as String
         let score = object.valueForKey("count") as Int
         cell.count.text = "\(score)"
-        
-        //Retrieve date from Parse Servers
+      //Code for Displaying Time  
+    //Retrieve date from Parse Servers and display in label
         var dateUpdated = object.createdAt as NSDate
         var dateFormat = NSDateFormatter()
-        dateFormat.dateFormat = "EEE, MMM d, h:mm a"
+        dateFormat.dateFormat = "h:mm a"
         let parseDate = NSString(format: "%@", dateFormat.stringFromDate(dateUpdated))
         
-        cell.time.text = NSString(format: "%@", dateFormat.stringFromDate(dateUpdated))
+        cell.time.text = getTimeDifference(parseDate)
+		//NSString(format: "%@", dateFormat.stringFromDate(dateUpdated))
         
-        //Current Time to find date difference
+    var year: 31536000
+	var month: 2592000
+	var week: 604800
+	var day: 86400
+	var hour: 3600
+	var minute: 60
+	func getTimeDifference(date: String) -> String {
+
+	var currentTime: NSDate=NSDate()
+	var seconds: currentTime.IntervalSinceDate(date)
+	if seconds < minute {
+		return "Moments ago"
+	}
+	if seconds < 2*minute {
+		return "1 minute ago"
+	}
+	for index in 3...60 {
+		if seconds < minute*index) {
+			return "\(index-1) minutes ago"
+		}
+	}
+	if seconds < 2*hour {
+		return "1 hour ago"
+	}
+	for index in 3...24 {
+		if seconds < hour*index {
+			return "\(index-1) hours ago"
+		}
+	}
+	if seconds < 2*day {
+		return "1 day ago"
+	}
+	for index in 3...7 {
+		if seconds < day*index {
+			return "\(index-1) days ago"
+		}
+	}
+	if seconds < 2*week {
+		return "1 week ago"
+	}
+	for index in 3...4 {
+		if seconds < week*(index) {
+			return "\(index-1) weeks ago"
+		}
+	}
+	if seconds < 2*month {
+		return "1 month ago"
+	}
+	for index in 3...12 {
+		if seconds < month*(index) {
+			return "\(index-1) months ago"
+		}
+	}
+	if seconds > year {
+		return "1 year ago"
+	}
+}
+        
+    //Current Time to find date difference
         /*
         let date = NSDate()
         let calendar = NSCalendar.currentCalendar()
@@ -137,21 +197,24 @@ class TableViewController: PFQueryTableViewController, CLLocationManagerDelegate
         //cell.time.text = date
         //cell.time.text = "\((indexPath.row + 1) * 3)m ago"
         */
-
+        //let reportCount = object.valueForKey("reportCount")
+        
+        //cell.reportCounter.text = "\(reportCount)"
         
         
+        //let replycnt = object.objectForKey("replies") as Int
+        //cell.replies.text = "\(replycnt) replies"
+       
         
-        let replycnt = object.objectForKey("replies") as Int
-        cell.replies.text = "\(replycnt) replies"
+    //Photo from user
         let userImageFile = object.valueForKey("profileImage") as PFFile
-        
         userImageFile.getDataInBackgroundWithBlock {
             (imageData: NSData!, error: NSError!) -> Void in
-            //if !(error != nil) {
+            if error == nil {
                 let image = UIImage(data:imageData)
 
                 cell.parseImage.image = image
-            //}
+            }
         }
 
         
@@ -166,10 +229,19 @@ class TableViewController: PFQueryTableViewController, CLLocationManagerDelegate
         let hitPoint = sender.convertPoint(CGPointZero, toView: self.tableView)
         let hitIndex = self.tableView.indexPathForRowAtPoint(hitPoint)
         let object = objectAtIndexPath(hitIndex)
-        object.incrementKey("count")
-        object.saveInBackground()
-        self.tableView.reloadData()
-        NSLog("Top Index Path \(hitIndex?.row)")
+        if contains(object.voters, getUser()) {
+		//do nothing
+		} else {
+		object.incrementKey("count")
+		object.saveInBackground()
+		self.tableView.reloadData()
+		NSLog("Top Index Path \(hitIndex!.row)")
+		}
+		//object.incrementKey("count")
+        //object.saveInBackground()
+        //self.tableView.reloadData()
+        //NSLog("Top Index Path \(hitIndex?.row)")
+        
         
     }
 
@@ -177,19 +249,54 @@ class TableViewController: PFQueryTableViewController, CLLocationManagerDelegate
         let hitPoint = sender.convertPoint(CGPointZero, toView: self.tableView)
         let hitIndex = self.tableView.indexPathForRowAtPoint(hitPoint)
         let object = objectAtIndexPath(hitIndex)
-        object.incrementKey("count", byAmount: -1)
+        if contains(object.voters, getUser()) {
+			//do nothing
+		} else {
+		object.incrementKey("count", byAmount: -1)
+		object.saveInBackground()
+		self.tableView.reloadData()
+		NSLog("Bottom Index Path \(hitIndex!.row)")
+		}
+		//object.incrementKey("count", byAmount: -1)
+        //object.saveInBackground()
+        //self.tableView.reloadData()
+        //NSLog("Bottom Index Path \(hitIndex?.row)")
+        
+    }
+    
+    
+    
+    
+    
+    @IBAction func reportPostPressed(sender: UIButton) {
+       
+        let hitPoint = sender.convertPoint(CGPointZero, toView: self.tableView)
+        let hitIndex = self.tableView.indexPathForRowAtPoint(hitPoint)
+        let object = objectAtIndexPath(hitIndex)
+        object.incrementKey("reportCount", byAmount: 1)
         object.saveInBackground()
         self.tableView.reloadData()
         NSLog("Bottom Index Path \(hitIndex?.row)")
+
+        let alertController = UIAlertController(title: "Reported", message:
+            "Thank you for informing us! We will review this post for inappropriate content and act accordingly.", preferredStyle: UIAlertControllerStyle.Alert)
+        alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+        
+        self.presentViewController(alertController, animated: true, completion: nil)
+        let button = sender
+
+        button.enabled = false
+  
     }
+
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if(segue.identifier == "yakDetail"){
             let indexPath = self.tableView.indexPathForSelectedRow()
             let obj = self.objects[indexPath!.row] as PFObject
             let navVC = segue.destinationViewController as UINavigationController
-            let detailVC = navVC.topViewController as DetailViewController
-            detailVC.yak = obj
+            //let detailVC = navVC.topViewController as DetailViewController
+            //detailVC.yak = obj
         }
     }
    

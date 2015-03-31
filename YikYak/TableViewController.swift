@@ -226,6 +226,21 @@ class TableViewController: PFQueryTableViewController, CLLocationManagerDelegate
   
     
     @IBAction func topButton(sender: AnyObject) {
+    //initially checks if user
+var currentUser = PFUser.currentUser()
+if currentUser != nil {
+//Typical Stuff
+} else {
+//creates Anonymous User
+PFAnonymousUtils.logInWithBlock {
+	(user: PFUser!, error: NSError!) -> Void in
+	if error != nil || user == nil {
+		println("Anonymous login failed.")
+	} else {
+		println("Anonymous user logged in.")
+	}
+}
+}
         let hitPoint = sender.convertPoint(CGPointZero, toView: self.tableView)
         let hitIndex = self.tableView.indexPathForRowAtPoint(hitPoint)
         let object = objectAtIndexPath(hitIndex)
@@ -246,6 +261,21 @@ class TableViewController: PFQueryTableViewController, CLLocationManagerDelegate
     }
 
     @IBAction func bottomButton(sender: AnyObject) {
+    //initially checks if user
+var currentUser = PFUser.currentUser()
+if currentUser != nil {
+//Typical Stuff
+} else {
+//creates Anonymous User
+PFAnonymousUtils.logInWithBlock {
+	(user: PFUser!, error: NSError!) -> Void in
+	if error != nil || user == nil {
+		println("Anonymous login failed.")
+	} else {
+		println("Anonymous user logged in.")
+	}
+}
+}
         let hitPoint = sender.convertPoint(CGPointZero, toView: self.tableView)
         let hitIndex = self.tableView.indexPathForRowAtPoint(hitPoint)
         let object = objectAtIndexPath(hitIndex)

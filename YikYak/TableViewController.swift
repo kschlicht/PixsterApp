@@ -221,33 +221,39 @@ class TableViewController: PFQueryTableViewController, CLLocationManagerDelegate
         
         return cell
     }
-
+    //function creates/finds an id stored locally in a file
+func userID() -> String {
+	let destinationPath = NSTemporaryDirectory()+"userID.txt")
+	let manager = NSFileManager.defaultManager()
+	if manager.fileExistsAtPath(destinationPath) {
+		let userID = NSString(contentsOfFile: destinationPath, encoding: NSUTF8StringEncoding, error: nil) as String
+		return userID
+	} else{	
+		let userID = String(arc4random())
+		var error: NSError?
+		let written = userID.writeToFile(destinationPath, atomically: true, encoding: NSUTF8StringEncoding, error: &error)
+		if written {
+		println("Success")
+		return userID
+		} else {
+			println("An error occurred:\(errorValue)")
+		}
+	}
+}
     
   
     
     @IBAction func topButton(sender: AnyObject) {
-    //initially checks if user
-var currentUser = PFUser.currentUser()
-if currentUser != nil {
-//Typical Stuff
-} else {
-//creates Anonymous User
-PFAnonymousUtils.logInWithBlock {
-	(user: PFUser!, error: NSError!) -> Void in
-	if error != nil || user == nil {
-		println("Anonymous login failed.")
-	} else {
-		println("Anonymous user logged in.")
-	}
-}
-}
+
         let hitPoint = sender.convertPoint(CGPointZero, toView: self.tableView)
         let hitIndex = self.tableView.indexPathForRowAtPoint(hitPoint)
         let object = objectAtIndexPath(hitIndex)
-        if contains(object.voters, getUser()) {
+        let userID = getUser()
+        if contains(object.voters,userID) {
 		//do nothing
 		} else {
 		object.incrementKey("count")
+		object.voters.append(userID)
 		object.saveInBackground()
 		self.tableView.reloadData()
 		NSLog("Top Index Path \(hitIndex!.row)")
@@ -261,29 +267,17 @@ PFAnonymousUtils.logInWithBlock {
     }
 
     @IBAction func bottomButton(sender: AnyObject) {
-    //initially checks if user
-var currentUser = PFUser.currentUser()
-if currentUser != nil {
-//Typical Stuff
-} else {
-//creates Anonymous User
-PFAnonymousUtils.logInWithBlock {
-	(user: PFUser!, error: NSError!) -> Void in
-	if error != nil || user == nil {
-		println("Anonymous login failed.")
-	} else {
-		println("Anonymous user logged in.")
-	}
-}
-}
+
         let hitPoint = sender.convertPoint(CGPointZero, toView: self.tableView)
         let hitIndex = self.tableView.indexPathForRowAtPoint(hitPoint)
         let object = objectAtIndexPath(hitIndex)
-        if contains(object.voters, getUser()) {
+        let userID = userID()
+        if contains(object.voters, userID) {
 			//do nothing
 		} else {
 		object.incrementKey("count", byAmount: -1)
 		object.saveInBackground()
+		object.voters.appends(userID)
 		self.tableView.reloadData()
 		NSLog("Bottom Index Path \(hitIndex!.row)")
 		}

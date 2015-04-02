@@ -248,11 +248,11 @@ func userID() -> String {
         let hitPoint = sender.convertPoint(CGPointZero, toView: self.tableView)
         let hitIndex = self.tableView.indexPathForRowAtPoint(hitPoint)
         let object = objectAtIndexPath(hitIndex)
-        let userID = getUser()
-        if contains(object.voters,userID) {
-		//do nothing
-		} else {
+        let user = userID()
+        let userArray :  [String] = [user]
+        if !contains(object["Voters"],user) {
 		object.incrementKey("count")
+		object.addUniqueObjectsFromArray(userArray, forKey: "Voters")
 		object.voters.append(userID)
 		object.saveInBackground()
 		self.tableView.reloadData()
@@ -265,6 +265,14 @@ func userID() -> String {
         
         
     }
+	func inArray(user: String)-> bool {
+		for element in object["Voters"] {
+			if element == user {
+				return true
+			}
+				return false
+		}
+	}
 
     @IBAction func bottomButton(sender: AnyObject) {
 

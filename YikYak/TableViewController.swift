@@ -240,7 +240,6 @@ func userID() -> String {
 		}
 	}
 }
-    
   
     
     @IBAction func topButton(sender: AnyObject) {
@@ -255,7 +254,8 @@ func userID() -> String {
 		object.incrementKey("count")
 		object.voters.append(userID)
 		object.saveInBackground()
-		self.tableView.reloadData()
+		self.tableView.reloadRowsAtIndexPaths(hitIndex, withRowAnimation: UITableViewRowAnimation.None)
+		//self.tableView.reloadData()
 		NSLog("Top Index Path \(hitIndex!.row)")
 		}
 		//object.incrementKey("count")
